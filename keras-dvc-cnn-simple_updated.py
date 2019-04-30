@@ -170,9 +170,9 @@ model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(1, activation='sigmoid'))
 
-model.compile(loss='binary_crossentropy',
-              optimizer='rmsprop',
-              metrics=['accuracy'])
+model.compile(loss='mean_squared_error',
+              optimizer='sgd',
+              metrics=['mae', 'acc'])
 
 print(model.summary())
 
